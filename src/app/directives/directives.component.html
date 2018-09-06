@@ -1,0 +1,48 @@
+<div appExampleDirective>
+  <p>This div tag is tied to the directive <i>appExampleDirective</i> found in example.directive.ts</p>
+  <p>This div will start out highlighted in red. Whenever the mouse enters the div, it will be highlighted in yellow. Whenever the mouse exits the div, it will be highlighted in cyan</p>
+  <p>It is initially highlighted in red because the constructor sets the background color of the ElementRef instance el to 'red'</p>
+  <p>It is highlighted in yellow when the mouse enters the div because function associated with @HostListener('mouseenter') sets background color to 'yellow'</p>
+  <p>It is highlighted in cyan when the mouse exits the div because function associated with @HostListener('mouseexit') sets background color to 'cyan'</p>
+  <p><b><i>NOTE: THIS IS ALL DONE IN example.directive.ts AND NOT IN THE COMPONENT!</i></b></p>
+</div>
+
+
+<div>
+  <h3>What are Directives? Explain the attribute directive</h3>
+  <ul>
+    <li>Directives are <i><b>instructions which tell angular to do something</b></i></li>
+    <li>Attribute Directives <i><b>allow you to attach behaviour to elements in the DOM</b></i></li>
+    <ul>
+      <li><b>Document Object Model (DOM)</b></li>
+      <ul>
+        <li>An API for valid HTML and well-formed XML documents</li>
+        <li>Defines the logical structure of documents and the way a document is accessed and manipulated</li>
+        <li>Using DOM, yhou can build documents, navigate their structure, add, modify, or delete elements and content</li>
+        <li>Anything found in an HTML/DOM document can be accessed, changed, deleted, or added using the DOM</li>
+        <li>Browser turns HTML tags into elements in a tree using DOM</li>
+        <li>Standard convention for representing and interacting with elements in HTML</li>
+        <li><img src="../../assets/directives/DOM_Tree.png"></li>
+      </ul>
+    </ul>
+  </ul>
+
+  <h3>How many types of Directives are there in Angular 2?</h3>
+  There are three directives:
+  <ol>
+    <li>Component</li>
+    <li>Structural</li>
+    <li>Attribute</li>
+  </ol>
+
+  <h3>How are events attached to a Directive?</h3>
+  <ul>
+    <li>Need to use the @HostListener decorator. Allows us to subscribe to events of the DOM that host an attribute directive</li>
+  </ul>
+
+  <h3>How do we pass external data into Directives?</h3>
+  <ul>
+    <li>Passing external data into a directive means we can pass any data from a different component into the directive</li>
+    <li>It can be done using @Input() data binding</li>
+  </ul>
+</div>
